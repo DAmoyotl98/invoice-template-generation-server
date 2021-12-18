@@ -7,7 +7,7 @@ const routes = function (server) {
   server.use("/api/invoice", invoice); //invoice
   server.use("/api/item", item); //item
   server.use("/api/user", user); //user
-  //server.use('/',express.static('public/build'))
+  server.use('/',express.static('public/build'))
 };
 
 module.exports = routes;
