@@ -11,14 +11,9 @@ function addCompany(
   city,
   country,
   phone,
-  email
+  email,
+  type
 ) {
-  {
-    /*if(!nameCompany || !name || !website || !phone || !email){
-        return Promise.reject('Controller: Invalid parameters, image is optional')
-    }*/
-  }
-
   const company = {
     nameCompany,
     name,
@@ -28,10 +23,39 @@ function addCompany(
     country,
     phone,
     email,
+    type,
   };
   return store.addCompany(company);
 }
 
+//Edit user's company
+function editCompany(
+  id_user,
+  nameCompany,
+  name,
+  website,
+  address,
+  city,
+  country,
+  phone,
+  email,
+  type
+) {
+  return store.editCompany(
+    id_user,
+    nameCompany,
+    name,
+    website,
+    address,
+    city,
+    country,
+    phone,
+    email,
+    type
+  );
+}
+
 module.exports = {
   addCompany,
+  editCompany,
 };

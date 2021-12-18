@@ -11,6 +11,7 @@ const mySchema = new Schema({
   country: String,
   phone: String,
   email: String,
+  type: Number //Para diferenciar los usuarios de los clientes
 });
 
 const model = mongoose.model("UserCompany", mySchema);
